@@ -1,0 +1,42 @@
+{
+  "name": "recipe_nest_and_chief_portal_backend",
+  "version": "1.0.0",
+  
+  "description": "Recipe Nest and Chief Portal",
+  "keywords": [
+    "recipe",
+    "chef",
+    "food",
+    "backend",
+    "nodejs",
+    "express",
+    "api"
+  ],
+  "homepage": "https://github.com/cpnnabin/Recipe-Nest-and-Chief-Portal#readme",
+  "bugs": {
+    "url": "https://github.com/cpnnabin/Recipe-Nest-and-Chief-Portal/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpnnabin/Recipe-Nest-and-Chief-Portal.git"
+  },
+  "license": "ISC",
+  "author": "Nabin Dhakal, cpnnabin",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^9.3.0",
+    "multer": "^2.1.1",
+    "nodemon": "^3.1.14",
+    "uuid": "^9.0.0"
+  }
+}

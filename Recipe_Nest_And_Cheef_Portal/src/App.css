@@ -1,0 +1,20 @@
+@import './styles/Base.css';
+@import './styles/Auth.css';
+@import './styles/LandingPage.css';
+@import './styles/HomePage.css';
+@import './styles/Dashboard.css';
+@import './styles/ProfilePage.css';
+@import './styles/Footer.css';
+@import './styles/Navbar.css';
+@import './styles/AddRecipe.css';
+@import './styles/Recipe.css';
+@import './styles/CommentSection.css';
+@import './styles/AdminPortal.css';
+@import './styles/AdminAnalytics.css';
+@import './styles/UserManagement.css';
+@import './styles/CommentManagement.css';
+@import './styles/CommentSection.css';
+@import './styles/SavedRecipe.css';
+@import './styles/Pagination.css';
+
+

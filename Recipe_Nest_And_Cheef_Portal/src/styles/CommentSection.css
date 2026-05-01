@@ -1,0 +1,505 @@
+/* ══════════════════════════════════════════════════
+CommentSection — Light Modal Theme
+Accent: #1d5fdb (warm orange)
+Text: #1e293b (dark brown)
+══════════════════════════════════════════════════ */
+
+.cs-root {
+margin-top: 32px;
+padding-top: 24px;
+border-top: 2px solid #dbeafe;
+}
+
+/* ── Heading ─────────────────────────────────── */
+.cs-heading {
+font-family: 'Playfair Display', Georgia, serif;
+font-size: 20px;
+font-weight: 700;
+color: #1e293b;
+margin-bottom: 18px;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.cs-count-badge {
+font-family: 'DM Sans', sans-serif;
+font-size: 12px;
+font-weight: 600;
+padding: 2px 10px;
+border-radius: 20px;
+background: #dbeafe;
+border: 1px solid #5ea2f2;
+color: #1d5fdb;
+}
+
+/* ── Compose box ─────────────────────────────── */
+.cs-compose {
+background: #f8fbff;
+border: 1.5px solid #bfdbfe;
+border-radius: 14px;
+padding: 18px;
+margin-bottom: 24px;
+box-shadow: 0 2px 8px rgba(47, 124, 236, 0.08);
+}
+
+.cs-compose-label {
+font-family: 'DM Sans', sans-serif;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+color: #64748b;
+margin-bottom: 10px;
+font-weight: 600;
+}
+
+.cs-compose-rating-row {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 12px;
+}
+
+.cs-compose-rating-label {
+font-family: 'DM Sans', sans-serif;
+font-size: 13px;
+color: #475569;
+font-weight: 500;
+}
+
+/* Stars */
+.cs-stars {
+display: flex;
+gap: 3px;
+}
+
+.cs-star {
+background: none;
+border: none;
+font-size: 22px;
+cursor: pointer;
+color: #d9c4ae;
+padding: 0;
+line-height: 1;
+transition: color 0.15s ease, transform 0.1s ease;
+}
+
+.cs-star:hover { transform: scale(1.2); }
+.cs-star--filled { color: #5ea2f2; }
+.cs-star:disabled { cursor: default; }
+.cs-star:disabled:hover { transform: none; }
+
+/* Textarea */
+.cs-textarea {
+width: 100%;
+background: #fff;
+border: 1.5px solid #cbd5e1;
+border-radius: 10px;
+color: #1e293b;
+font-family: 'DM Sans', sans-serif;
+font-size: 14px;
+padding: 12px 14px;
+resize: none;
+outline: none;
+box-sizing: border-box;
+transition: border-color 0.2s ease, box-shadow 0.2s ease;
+line-height: 1.6;
+}
+
+.cs-textarea::placeholder { color: #94a3b8; }
+.cs-textarea:focus {
+border-color: #1d5fdb;
+box-shadow: 0 0 0 3px rgba(47, 124, 236, 0.1);
+}
+
+.cs-compose-footer {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-top: 10px;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+.cs-char-count {
+font-size: 11px;
+color: #94a3b8;
+font-family: 'DM Sans', sans-serif;
+}
+
+.cs-post-btn {
+background: linear-gradient(135deg, #5ea2f2, #1d5fdb);
+border: none;
+border-radius: 50px;
+color: #fff;
+font-family: 'DM Sans', sans-serif;
+font-size: 13px;
+font-weight: 600;
+padding: 10px 24px;
+cursor: pointer;
+transition: all 0.2s ease;
+box-shadow: 0 4px 14px rgba(47, 124, 236, 0.28);
+letter-spacing: 0.3px;
+}
+
+.cs-post-btn:hover:not(:disabled) {
+transform: translateY(-1px);
+box-shadow: 0 6px 20px rgba(47, 124, 236, 0.4);
+}
+
+.cs-post-btn:disabled {
+opacity: 0.45;
+cursor: not-allowed;
+transform: none;
+}
+
+.cs-error {
+font-family: 'DM Sans', sans-serif;
+font-size: 12px;
+color: #c0392b;
+margin-top: 8px;
+background: #fee2e2;
+border-radius: 6px;
+padding: 6px 10px;
+border: 1px solid #fecaca;
+}
+
+.cs-login-prompt {
+text-align: center;
+padding: 16px;
+font-family: 'DM Sans', sans-serif;
+font-size: 13px;
+color: #475569;
+background: #f8fbff;
+border: 1.5px dashed #bfdbfe;
+border-radius: 10px;
+margin-bottom: 24px;
+}
+
+/* ── Comments list ─────────────────────────── */
+.cs-list {
+display: flex;
+flex-direction: column;
+gap: 0;
+}
+
+.cs-empty {
+text-align: center;
+padding: 32px 0;
+font-family: 'DM Sans', sans-serif;
+font-size: 14px;
+color: #64748b;
+}
+
+.cs-empty-icon { font-size: 36px; margin-bottom: 10px; }
+
+/* ── Individual Comment ──────────────────── */
+.cs-comment {
+padding: 16px 0;
+border-bottom: 1px solid #dbeafe;
+animation: csSlideIn 0.3s ease both;
+}
+
+.cs-comment:last-child { border-bottom: none; }
+
+@keyframes csSlideIn {
+from { opacity: 0; transform: translateY(8px); }
+to   { opacity: 1; transform: translateY(0); }
+}
+
+.cs-comment--reply {
+padding: 12px 0 12px 16px;
+border-bottom: none;
+border-left: 3px solid #bfdbfe;
+margin-left: 4px;
+background: #f8fbff;
+border-radius: 0 8px 8px 0;
+padding-right: 10px;
+margin-top: 8px;
+}
+
+.cs-comment-header {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+margin-bottom: 8px;
+}
+
+.cs-avatar {
+width: 36px;
+height: 36px;
+border-radius: 50%;
+overflow: hidden;
+background: #dbeafe;
+border: 2px solid #5ea2f2;
+flex-shrink: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.cs-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.cs-avatar-initial {
+font-size: 15px;
+font-weight: 700;
+color: #1d5fdb;
+font-family: 'DM Sans', sans-serif;
+}
+
+.cs-comment-meta {
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+gap: 6px;
+flex: 1;
+}
+
+.cs-author-name {
+font-family: 'DM Sans', sans-serif;
+font-size: 13px;
+font-weight: 700;
+color: #1e293b;
+}
+
+.cs-timestamp {
+font-size: 11px;
+color: #94a3b8;
+font-family: 'DM Sans', sans-serif;
+}
+
+.cs-edited {
+font-size: 10px;
+color: #94a3b8;
+font-style: italic;
+font-family: 'DM Sans', sans-serif;
+}
+
+.cs-delete-btn {
+background: none;
+border: none;
+cursor: pointer;
+font-size: 15px;
+opacity: 0.4;
+padding: 2px 5px;
+border-radius: 4px;
+transition: opacity 0.2s ease, background 0.2s ease;
+flex-shrink: 0;
+margin-left: auto;
+}
+
+.cs-delete-btn:hover {
+opacity: 1;
+background: #fee2e2;
+}
+
+.cs-owner-actions {
+display: flex;
+gap: 4px;
+margin-left: auto;
+flex-shrink: 0;
+}
+
+.cs-edit-btn {
+background: none;
+border: none;
+cursor: pointer;
+font-size: 14px;
+opacity: 0.4;
+padding: 2px 5px;
+border-radius: 4px;
+transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.cs-edit-btn:hover {
+opacity: 1;
+background: #dbeafe;
+}
+
+.cs-edit-box {
+margin: 0 0 10px 46px;
+animation: csSlideIn 0.2s ease both;
+}
+
+.cs-edit-textarea {
+margin-bottom: 0;
+}
+
+.cs-comment-text {
+font-family: 'DM Sans', sans-serif;
+font-size: 14px;
+color: #334155;
+line-height: 1.65;
+margin: 0 0 10px 46px;
+white-space: pre-wrap;
+word-break: break-word;
+}
+
+/* ── Actions ────────────────────────────── */
+.cs-comment-actions {
+display: flex;
+gap: 6px;
+margin-left: 46px;
+}
+
+.cs-action-btn {
+background: none;
+border: 1px solid transparent;
+cursor: pointer;
+font-family: 'DM Sans', sans-serif;
+font-size: 12px;
+color: #64748b;
+display: flex;
+align-items: center;
+gap: 4px;
+padding: 4px 10px;
+border-radius: 20px;
+transition: all 0.2s ease;
+font-weight: 500;
+}
+
+.cs-action-btn:hover:not(:disabled) {
+color: #1d5fdb;
+background: #dbeafe;
+border-color: #bfdbfe;
+}
+
+.cs-action-btn:disabled { cursor: default; opacity: 0.5; }
+
+.cs-like-btn--active {
+color: #1d5fdb !important;
+background: #dbeafe !important;
+border-color: #5ea2f2 !important;
+}
+
+.cs-like-icon { font-size: 14px; }
+
+/* ── Reply box ───────────────────────────── */
+.cs-reply-box {
+margin: 12px 0 0 46px;
+animation: csSlideIn 0.2s ease both;
+}
+
+.cs-reply-input {
+width: 100%;
+background: #fff;
+border: 1.5px solid #cbd5e1;
+border-radius: 10px;
+color: #1e293b;
+font-family: 'DM Sans', sans-serif;
+font-size: 13px;
+padding: 10px 12px;
+resize: none;
+outline: none;
+box-sizing: border-box;
+transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cs-reply-input::placeholder { color: #94a3b8; }
+.cs-reply-input:focus {
+border-color: #1d5fdb;
+box-shadow: 0 0 0 3px rgba(47, 124, 236, 0.1);
+}
+
+.cs-reply-actions {
+display: flex;
+gap: 8px;
+justify-content: flex-end;
+margin-top: 8px;
+}
+
+.cs-reply-cancel {
+background: none;
+border: 1.5px solid #cbd5e1;
+border-radius: 20px;
+color: #475569;
+font-family: 'DM Sans', sans-serif;
+font-size: 12px;
+padding: 6px 14px;
+cursor: pointer;
+transition: all 0.2s ease;
+font-weight: 500;
+}
+
+.cs-reply-cancel:hover {
+border-color: #1d5fdb;
+color: #1d5fdb;
+background: #f8fbff;
+}
+
+.cs-reply-submit {
+background: linear-gradient(135deg, #5ea2f2, #1d5fdb);
+border: none;
+border-radius: 20px;
+color: #fff;
+font-family: 'DM Sans', sans-serif;
+font-size: 12px;
+font-weight: 600;
+padding: 6px 18px;
+cursor: pointer;
+transition: all 0.2s ease;
+box-shadow: 0 2px 8px rgba(201, 97, 42, 0.3);
+}
+
+.cs-reply-submit:hover:not(:disabled) {
+box-shadow: 0 4px 12px rgba(47, 124, 236, 0.35);
+transform: translateY(-1px);
+}
+
+.cs-reply-submit:disabled { opacity: 0.45; cursor: not-allowed; }
+
+/* ── Replies container ───────────────────── */
+.cs-replies {
+margin-top: 12px;
+margin-left: 34px;
+display: flex;
+flex-direction: column;
+gap: 0;
+}
+
+/* ── Load more ───────────────────────────── */
+.cs-load-more {
+display: block;
+width: 100%;
+margin-top: 16px;
+padding: 12px;
+background: #f8fbff;
+border: 1.5px solid #bfdbfe;
+border-radius: 10px;
+color: #1d5fdb;
+font-family: 'DM Sans', sans-serif;
+font-size: 13px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.2s ease;
+text-align: center;
+}
+
+.cs-load-more:hover {
+background: #dbeafe;
+border-color: #1d5fdb;
+box-shadow: 0 2px 8px rgba(47, 124, 236, 0.15);
+}
+
+.cs-loading {
+text-align: center;
+padding: 28px 0;
+color: #64748b;
+font-family: 'DM Sans', sans-serif;
+font-size: 13px;
+}
+
+.cs-clear-rating-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 11px;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  padding: 0;
+}
+
+.cs-clear-rating-btn:hover {
+  color: #1d5fdb;
+  text-decoration: underline;
+}

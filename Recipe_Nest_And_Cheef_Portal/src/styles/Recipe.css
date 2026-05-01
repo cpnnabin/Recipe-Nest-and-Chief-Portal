@@ -1,0 +1,396 @@
+
+
+/* ── Page wrapper ── */
+.recipe-detail-page {
+  padding: clamp(16px, 3vw, 40px) clamp(12px, 2.5vw, 36px) 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+ background: linear-gradient(135deg, #feffff 0%, #eef7f0 45%, #fdfaf3 100%);
+}
+
+/* ── Card: floats on sage green background ── */
+.recipe-detail-card {
+  width: 100%;
+  max-width: 1300px;
+  background: #ffffff;
+  border: 1px solid #c6e6d0;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(22, 101, 52, 0.10);
+}
+
+/* ── Hero image ── */
+.recipe-detail-image {
+  width: 100%;
+  aspect-ratio: 16 / 8.5;
+  object-fit: cover;
+  display: block;
+  background: linear-gradient(135deg, #f6e7c2, #e9d7a6);
+}
+
+/* ── Content area ── */
+.recipe-detail-content {
+  padding: 24px 20px 40px;
+ color: #1f2937;
+background: linear-gradient(to bottom, #ffffff, #fcfcfc);
+}
+
+/* ── Top row: title block + actions ── */
+.recipe-detail-top {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.recipe-detail-top h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  line-height: 1.1;
+  color: #1a0f00;
+  margin: 0 0 8px;
+}
+
+.recipe-detail-subtitle {
+  color: #5b4630;
+  font-size: clamp(0.88rem, 2.5vw, 1rem);
+  line-height: 1.75;
+  max-width: 60ch;
+}
+
+.recipe-detail-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.recipe-share-btn {
+  border: 1px solid #d4a544;
+  background: #fff8e7;
+  color: #7a5110;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.recipe-share-btn:hover {
+  background: #f8edd2;
+}
+
+.recipe-share-feedback {
+  margin: 4px 0 0;
+  color: #0f766e;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+/* ── Back button ── */
+.recipe-detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #8a5b12;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(124, 83, 17, 0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+  margin-bottom: 16px;
+  align-self: flex-start;
+}
+
+.recipe-detail-back:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(124, 83, 17, 0.18);
+}
+
+.recipe-detail-back:focus-visible {
+  outline: 3px solid rgba(201, 149, 42, 0.35);
+  outline-offset: 3px;
+}
+
+/* ── Meta pills ── */
+.recipe-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 22px;
+}
+
+.recipe-detail-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #f7efe0;
+  color: #5b4630;
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ── Sections ── */
+.recipe-detail-section {
+  margin-top: 22px;
+}
+
+.recipe-detail-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
+  color: #1a0f00;
+  margin: 0 0 12px;
+}
+
+.recipe-detail-section p {
+  color: #5b4630;
+  line-height: 1.8;
+  font-size: 0.97rem;
+}
+
+/* ── Ingredient list ── */
+.recipe-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.recipe-detail-list li {
+  background: #fffaf0;
+  border: 1px solid rgba(233, 196, 106, 0.25);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #4f3822;
+  font-size: 0.93rem;
+}
+
+.recipe-detail-list li strong {
+  color: #c9952a;
+}
+
+/* ── Steps list ── */
+.recipe-detail-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.recipe-detail-steps li {
+  background: #fffaf0;
+  border: 1px solid rgba(233, 196, 106, 0.25);
+  border-radius: 14px;
+  padding: 14px 16px;
+  color: #4f3822;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+  font-size: 0.93rem;
+}
+
+.recipe-detail-steps li span {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e8b84b, #c9952a);
+  color: #1a0f00;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.recipe-detail-steps li p {
+  margin-top: 4px;
+  line-height: 1.65;
+}
+
+/* ── Tags ── */
+.recipe-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.recipe-detail-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #f5e6c8;
+  color: #7a5110;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+
+/* ============================================================
+   ≥ 900px  — DESKTOP: sticky image left | scrollable content right
+   ============================================================ */
+@media (min-width: 900px) {
+  /* Card becomes a 2-column grid: 46% image | 54% content */
+  .recipe-detail-card {
+    display: grid;
+    grid-template-columns: 46fr 54fr;
+    min-height: calc(100vh - 80px);
+  }
+
+  /* Image fills left column, sticks while content scrolls */
+  .recipe-detail-image {
+    position: sticky;
+    top: clamp(16px, 3vw, 40px);
+    height: calc(100vh - clamp(32px, 6vw, 80px));
+    width: 100%;
+    aspect-ratio: unset;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px 0 0 20px;
+  }
+
+  /* Content column scrolls independently */
+  .recipe-detail-content {
+    padding: 36px 40px 60px;
+    overflow-y: auto;
+  }
+
+  .recipe-detail-top {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .recipe-detail-top h1 {
+    font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+  }
+
+  /* Ingredients into 2-col grid */
+  .recipe-detail-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .recipe-detail-meta span {
+    font-size: 0.92rem;
+    padding: 9px 16px;
+  }
+}
+
+
+/* ============================================================
+   ≥ 1280px  — Wide desktop
+   ============================================================ */
+@media (min-width: 1280px) {
+  .recipe-detail-card {
+    grid-template-columns: 50fr 50fr;
+  }
+
+  .recipe-detail-content {
+    padding: 44px 52px 72px;
+  }
+}
+
+
+/* ============================================================
+   ≤ 640px  — Mobile: stacked, slight margin so bg shows
+   ============================================================ */
+@media (max-width: 640px) {
+  .recipe-detail-page {
+    padding: 16px 12px 40px;
+  }
+
+  .recipe-detail-card {
+    display: block;
+    border-radius: 16px;
+  }
+
+  .recipe-detail-image {
+    aspect-ratio: 4 / 3;
+    position: static;
+    height: auto;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .recipe-detail-content {
+    padding: 18px 16px 32px;
+  }
+
+  .recipe-detail-back {
+    padding: 8px 16px;
+    font-size: 0.84rem;
+    margin-bottom: 14px;
+  }
+
+  /* Meta pills → 2-per-row grid */
+  .recipe-detail-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+  }
+
+  .recipe-detail-meta span {
+    justify-content: center;
+    padding: 9px 10px;
+    font-size: 0.82rem;
+  }
+
+  /* Ingredients back to single column */
+  .recipe-detail-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Steps: collapse number above text on very small screens */
+  .recipe-detail-steps li {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .recipe-detail-steps li span {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .recipe-detail-tag {
+    padding: 7px 11px;
+    font-size: 0.8rem;
+  }
+}
+
+
+/* ============================================================
+   ≤ 400px  — Very small phones
+   ============================================================ */
+@media (max-width: 400px) {
+  .recipe-detail-content {
+    padding: 14px 12px 28px;
+  }
+
+  .recipe-detail-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-detail-meta span {
+    justify-content: flex-start;
+  }
+
+  .recipe-detail-back {
+    font-size: 0.8rem;
+    padding: 7px 14px;
+  }
+  
+}

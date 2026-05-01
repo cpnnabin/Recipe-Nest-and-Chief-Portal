@@ -1,0 +1,48 @@
+{
+  "name": "recipe_nest_and_chief_portal_backend",
+  "version": "1.0.0",
+  "description": "Recipe Nest and Chief Portal",
+  "keywords": [
+    "recipe",
+    "chef",
+    "food",
+    "backend",
+    "nodejs",
+    "express",
+    "api"
+  ],
+  "homepage": "https://github.com/cpnnabin/Recipe-Nest-and-Chief-Portal#readme",
+  "bugs": {
+    "url": "https://github.com/cpnnabin/Recipe-Nest-and-Chief-Portal/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpnnabin/Recipe-Nest-and-Chief-Portal.git"
+  },
+  "license": "ISC",
+  "author": "Nabin Dhakal, cpnnabin",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "seed": "node scripts/seed-db.js",
+    "seed:reset": "node scripts/seed-db.js --reset",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^7.1.1",
+    "mongoose": "^8.19.1",
+    "multer": "^2.1.1",
+    "mysql2": "^3.6.0",
+    "nodemon": "^3.1.14",
+    "sequelize": "^6.35.0",
+    "uuid": "^9.0.0"
+  }
+}

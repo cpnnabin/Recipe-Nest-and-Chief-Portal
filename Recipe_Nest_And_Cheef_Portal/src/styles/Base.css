@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* =============================================
+   GLOBAL RESET & BASE
+   ============================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* =============================================
+   SHARED FORM STYLES (Signup / Login pages)
+   ============================================= */
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  padding: 40px 35px;
+  border-radius: 5%;
+  background: rgba(247, 237, 237, 0.127);
+  backdrop-filter: blur(2px);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 10px;
+}
+
+.tabs a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding-bottom: 8px;
+}
+
+.tabs a.active {
+  border-bottom: 2px solid white;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  color: white;
+  font-size: 15px;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 15px;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  border-radius: 25px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input:focus {
+  border-color: white;
+}
+
+select {
+  width: 100%;
+  padding: 10px 15px;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  border-radius: 25px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+select:focus {
+  border-color: white;
+}
+
+select option {
+  background: rgba(30, 20, 10, 0.95);
+  color: white;
+}
+
+button[type="submit"] {
+  width: 60%;
+  margin: 30px auto 0;
+  display: block;
+  padding: 12px;
+  background: #c8960c;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #e6a800;
+}
+
+span {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}

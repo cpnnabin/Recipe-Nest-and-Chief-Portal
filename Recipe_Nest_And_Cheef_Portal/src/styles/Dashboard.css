@@ -1,0 +1,424 @@
+/* =============================================
+   HOME DASHBOARD (Dashboard.png style)
+   ============================================= */
+
+.dashboard-page {
+  min-height: 100vh;
+  background: #ececec;
+  color: #1f2328;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.dashboard-page-clint {
+  background: #f3efff;
+}
+
+.dashboard-page-clint .dashboard-welcome h1 {
+  color: #4c1d95;
+}
+
+.dashboard-page-clint .dashboard-welcome p {
+  color: #5b21b6;
+}
+
+.dashboard-topbar {
+  min-height: 82px;
+  background: #f7f7f7;
+  border-bottom: 1px solid #d7d7d7;
+  padding: 12px clamp(14px, 2.4vw, 32px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(10px, 2vw, 24px);
+  flex-wrap: wrap;
+}
+
+.dashboard-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.dashboard-brand-logo {
+  width: clamp(34px, 4vw, 44px);
+  height: clamp(34px, 4vw, 44px);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dashboard-brand-text {
+  display: flex;
+  flex-direction: column;
+  color: #222;
+}
+
+.dashboard-brand-text strong {
+  font-size: clamp(1.1rem, 1.6vw, 1.55rem);
+  line-height: 1;
+  font-weight: 800;
+}
+
+.dashboard-brand-text span {
+  margin-top: 2px;
+  text-align: left;
+  color: #6b7280;
+  font-size: clamp(0.64rem, 0.95vw, 0.8rem);
+  font-weight: 500;
+}
+
+.dashboard-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 2.3vw, 34px);
+  flex-wrap: wrap;
+}
+
+.dashboard-nav a {
+  text-decoration: none;
+  font-size: clamp(0.92rem, 1.35vw, 1.35rem);
+  color: #4a4a4a;
+  font-weight: 600;
+}
+
+.dashboard-nav a.active {
+  color: #2f7cec;
+}
+
+.dashboard-logout {
+  border: 1px solid #d1d5db;
+  background: #f3f4f6;
+  color: #444;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-size: clamp(0.9rem, 1.25vw, 1.2rem);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dashboard-main {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: clamp(20px, 3vw, 38px) clamp(14px, 2.3vw, 32px) 56px;
+}
+
+.dashboard-welcome h1 {
+  text-align: left;
+  color: #1b1f24;
+  font-size: clamp(1.95rem, 4.1vw, 3.45rem);
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.dashboard-welcome p {
+  color: #575757;
+  font-size: clamp(1rem, 1.95vw, 1.95rem);
+  margin-top: 8px;
+}
+
+.dashboard-home-chips {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.dashboard-home-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #334155;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.dashboard-home-chip-primary {
+  background: #2f7cec;
+  border-color: #2f7cec;
+  color: #fff;
+}
+
+.dashboard-stats-grid {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 24px;
+}
+
+.dashboard-stat-card {
+  background: #f6f6f6;
+  border: 1px solid #d5d5d5;
+  border-radius: 18px;
+  padding: clamp(20px, 2vw, 30px) 20px;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dashboard-stat-card-clint {
+  background: #faf7ff;
+  border-color: #d8b4fe;
+}
+
+.dashboard-stat-card h3 {
+  font-size: clamp(1.9rem, 3.6vw, 3.1rem);
+  line-height: 1;
+  margin: 6px 0 4px;
+  color: #1d2127;
+}
+
+.dashboard-stat-card p {
+  font-size: clamp(0.9rem, 1.45vw, 1.42rem);
+  color: #5a5a5a;
+  text-align: center;
+}
+
+.dashboard-section-head {
+  margin-top: 52px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard-section-head h2,
+.dashboard-activity-wrap h2 {
+  font-size: clamp(1.5rem, 3.2vw, 2.7rem);
+  margin: 0;
+  color: #1f2328;
+}
+
+.dashboard-section-head a {
+  text-decoration: none;
+  color: #2f7cec;
+  font-size: clamp(0.92rem, 1.7vw, 1.42rem);
+  font-weight: 500;
+}
+
+.dashboard-saved-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.dashboard-recipe-card {
+  background: #f5f5f5;
+  border: 1px solid #d6d6d6;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.dashboard-recipe-card:hover,
+.dashboard-recipe-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+  outline: none;
+}
+
+.dashboard-recipe-card-clint {
+  background: #faf7ff;
+  border-color: #d8b4fe;
+}
+
+.dashboard-recipe-card img {
+  width: 100%;
+  height: clamp(170px, 22vw, 250px);
+  object-fit: cover;
+  display: block;
+}
+
+.dashboard-recipe-content {
+  padding: 16px 20px 20px;
+}
+
+.dashboard-chip {
+  display: inline-flex;
+  align-items: center;
+  background: #dbeafe;
+  color: #2563eb;
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: clamp(0.72rem, 1vw, 0.92rem);
+  font-weight: 500;
+}
+
+.dashboard-chip-clint {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.dashboard-recipe-content h3 {
+  margin: 12px 0 12px;
+  font-size: clamp(1.1rem, 2vw, 1.9rem);
+  color: #2b2f33;
+}
+
+.dashboard-recipe-content p {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  font-size: clamp(0.82rem, 1.35vw, 1.12rem);
+}
+
+.dashboard-activity-wrap {
+  margin-top: 54px;
+}
+
+.dashboard-activity-card {
+  margin-top: 20px;
+  background: #f5f5f5;
+  border: 1px solid #d6d6d6;
+  border-radius: 18px;
+  padding: 24px 26px;
+}
+
+.dashboard-activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 12px;
+  gap: 18px;
+  cursor: pointer;
+  transition: background 0.22s ease;
+}
+
+.dashboard-activity-item:hover,
+.dashboard-activity-item:focus-visible {
+  background: rgba(255, 255, 255, 0.65);
+  outline: none;
+}
+
+.dashboard-activity-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+
+.dashboard-activity-left img {
+  width: 96px;
+  height: 96px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.dashboard-activity-left h4 {
+  margin: 0 0 8px;
+  font-size: clamp(1rem, 2vw, 1.9rem);
+  color: #2b2f33;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dashboard-activity-left p {
+  margin: 0;
+  font-size: clamp(0.82rem, 1.35vw, 1.06rem);
+  color: #6b7280;
+}
+
+.dashboard-empty {
+  color: #6b7280;
+  font-size: clamp(0.95rem, 1.6vw, 1.25rem);
+  padding: 22px 2px;
+}
+
+@media (max-width: 1440px) {
+  .dashboard-main {
+    width: min(1120px, 100%);
+  }
+}
+
+@media (max-width: 1100px) {
+  .dashboard-topbar {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dashboard-brand {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dashboard-nav {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .dashboard-main { padding: 26px 16px 40px; }
+  .dashboard-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dashboard-saved-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dashboard-activity-left h4 { white-space: normal; }
+}
+
+@media (max-width: 820px) {
+  .dashboard-topbar {
+    justify-content: center;
+    row-gap: 10px;
+  }
+
+  .dashboard-nav {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 2px;
+  }
+
+  .dashboard-nav a {
+    white-space: nowrap;
+  }
+
+  .dashboard-logout {
+    width: 100%;
+  }
+
+  .dashboard-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .dashboard-home-chips {
+    gap: 10px;
+  }
+
+  .dashboard-saved-grid { grid-template-columns: 1fr; }
+  .dashboard-activity-item { flex-direction: column; align-items: flex-start; }
+  .dashboard-activity-item .dashboard-chip { align-self: flex-start; }
+}
+
+@media (max-width: 640px) {
+  .dashboard-brand-text span {
+    display: none;
+  }
+
+  .dashboard-main {
+    padding-inline: 12px;
+  }
+
+  .dashboard-activity-card {
+    padding: 14px;
+  }
+
+  .dashboard-activity-left {
+    width: 100%;
+  }
+
+  .dashboard-activity-left img {
+    width: 78px;
+    height: 78px;
+  }
+}
